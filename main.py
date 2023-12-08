@@ -19,7 +19,7 @@ import sys
 
 form_router = Router()
 TOKEN = "6632574068:AAHjKk8v5CYQl_wOAtZVNbHcrfR_uEoFz1g"
-bot = Bot(token=TOKEN, parse_mode=ParseMode.HTML)
+bot = Bot(token=TOKEN, parse_mode=ParseMode.HTM proxy='http://proxy.server:3128')
 dp = Dispatcher()
 dp.include_router(form_router)
 

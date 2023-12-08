@@ -1,3 +1,4 @@
+from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram import Bot, Dispatcher, F, Router, html, types
 from aiogram.filters import Command, CommandStart
 from aiogram.fsm.state import State, StatesGroup
@@ -19,8 +20,9 @@ import sys
 
 form_router = Router()
 TOKEN = "6632574068:AAHjKk8v5CYQl_wOAtZVNbHcrfR_uEoFz1g"
-bot = Bot(token=TOKEN, proxy='http://proxy.server:3128')
-dp = Dispatcher()
+bot = Bot(token=TOKEN, proxy='https://proxy.server:3128')
+storage = MemoryStorage()
+dp = Dispatcher(storage=storage)
 dp.include_router(form_router)
 
 class Form(StatesGroup):

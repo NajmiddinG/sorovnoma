@@ -20,7 +20,7 @@ import sys
 
 form_router = Router()
 TOKEN = "6632574068:AAHjKk8v5CYQl_wOAtZVNbHcrfR_uEoFz1g"
-bot = Bot(token=TOKEN, proxy='https://proxy.server:3128')
+bot = Bot(token=TOKEN) # proxy='https://proxy.server:3128'
 storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 dp.include_router(form_router)
